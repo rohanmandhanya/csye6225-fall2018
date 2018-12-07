@@ -61,6 +61,11 @@ public class UserController {
         FileSystemStorageService.testupload();
         return ResponseEntity.ok(currentTime);
     }
+    
+    @RequestMapping(value="/name",method = RequestMethod.GET )
+    public ResponseEntity<?> name(){
+        return "xyz";
+    }
 
     @RequestMapping(value="/register",method = RequestMethod.POST )
     public String createUser(@RequestBody User user) {

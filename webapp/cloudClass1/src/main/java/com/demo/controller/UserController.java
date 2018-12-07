@@ -63,8 +63,8 @@ public class UserController {
     }
     
     @RequestMapping(value="/name",method = RequestMethod.GET )
-    public ResponseEntity<?> name(){
-        return "xyz";
+    public ResponseEntity<?> name(@RequestBody User user){
+        return user.getName();
     }
 
     @RequestMapping(value="/register",method = RequestMethod.POST )
